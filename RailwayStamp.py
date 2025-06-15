@@ -1,6 +1,6 @@
 import os
 import re # Импортируем модуль re для работы с регулярными выражениями (для извлечения чисел из имени файла)
-from pypdf import PdfReader, PdfWriter # Используем pypdf для работы с PDF
+from PyPDF2 import PdfReader, PdfWriter # Используем pypdf для работы с PDF
 
 def extract_number_from_filename(filename):
     """
@@ -16,7 +16,7 @@ def extract_number_from_filename(filename):
         return numbers[0]
     return None # Если чисел в имени файла нет
 
-def process_matching_pdfs(railway_dir="Railway", stamp_dir="Stamp", output_dir="StampedRailway"):
+def process_matching_pdfs(railway_dir="Railway", stamp_dir="Stamp", output_dir="Railway+Stamp"):
     """
     Накладывает фоновый PDF из 'Stamp' на соответствующий PDF из 'Railway'
     по совпадению числовых значений в именах файлов.
