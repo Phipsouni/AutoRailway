@@ -1,10 +1,10 @@
 import os
-from pypdf import PdfReader, PdfWriter
+from PyPDF2 import PdfReader, PdfWriter
 
-def apply_background_to_pdfs(railway_dir="Railway", template_dir="Template", output_dir="PrintRailway"):
+def apply_background_to_pdfs(railway_dir="Railway", template_dir="Template", output_dir="Railway+Hieroglyphs"):
     """
     Накладывает PDF-файл из 'Template/Instructions.pdf' в качестве фона на все PDF-файлы
-    в директории 'Railway' и сохраняет результат в 'PrintRailway'.
+    в директории 'Railway' и сохраняет результат в 'Railway+Hieroglyphs'.
     """
 
     # Создаем выходную директорию, если ее нет
