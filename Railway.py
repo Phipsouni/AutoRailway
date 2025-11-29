@@ -318,7 +318,7 @@ def generate_merge_filename(file_tuples):
         ranges.append(f"{range_start}-{prev}")
 
     ranges_str = ";".join(ranges)
-    return f"Railway {ranges_str} {count} pcs.pdf"
+    return f"Railway {ranges_str} {count} pcs..pdf"
 
 
 def scenario_merge():
